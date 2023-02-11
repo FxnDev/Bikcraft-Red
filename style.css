@@ -1,6 +1,32 @@
+:root {
+    --cor-primaria: red;
+    --cor-primaria-escura: rgb(189, 0, 0);
+    --fundo-1: #f7f7f7;
+    --fundo-2: #fdfdfd;
+    --fundo-3: #f4f4f4;
+    --fundo-menu: rgb(229, 229, 229)
+    --footer: rgb(243, 242, 242);
+    --texto: black;
+    --onda: url(./img/onda.svg);
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --fundo-1: #111;
+        --fundo-2: #000;
+        --fundo-3: #000;
+        --fundo-menu: rgb(13, 13, 13);
+        --footer: rgb(23, 22, 22);
+        --texto: #ffffff;
+        --onda: url(./img/onda\ dark.svg);
+    }
+}
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f7f7;
+    background-color: var( --fundo-1);
+    color: var(--texto);
 }
 
 main {
@@ -22,7 +48,7 @@ main {
 
 .introducao {
     grid-row: 1;
-    background-color: #fdfdfd;
+    background-color: var( --fundo-2);
     position: relative;
 }
 
@@ -30,7 +56,7 @@ main {
     content: "";
     width: 60px;
     height: 4px;
-    background: red;
+    background: var( --cor-primaria);
     position:absolute;
     top: 30px;
     right: -30px;
@@ -59,16 +85,16 @@ ul {
 .menu a {
     display: block;
     text-decoration: none;
-    color:black;
-    background-color: #f4f4f4;
+    color:var(--texto);
+    background-color: var(--fundo-3);
     padding: 15px 30px;
     border-radius: 4px;
-    border: 2px solid #f4f4f4;
+    border: 2px solid var(--fundo-3);
 }
 
 .menu a:hover {
-    border: 2px solid rgb(189, 0, 0);
-    background-color: rgb(229, 229, 229);
+    border: 2px solid var( --cor-primaria-escura);
+    background-color: var(--fundo-menu);
 }
 
 .info {
@@ -91,18 +117,18 @@ ul {
 }
 
 .info a {
-    background-color: red;
+    background-color: var( --cor-primaria);
     padding: 15px 40px;
     border-radius: 4px;
     text-decoration: none;
-    color: #f4f4f4;
+    color: #FFFF;
     grid-row: 3;
     margin-top: 10px;
     margin: 10px;
 }
 
 .info a:hover {
-    background-color: rgb(189, 0, 0);
+    background-color: var( --cor-primaria-escura);
 }
 
 .subtitulo-vantagem {
@@ -111,13 +137,13 @@ ul {
     text-align: end;
     align-self: center;
     position: relative;
-    background-image: url(./img/onda.svg);
+    background-image: var(--onda);
 }
 
 .infos-vantagem {
     grid-column: 2;
     padding: 20px;
-    background-color: #fdfdfd;
+    background-color: var( --fundo-2);
     height: 400px;
 }
 
@@ -127,10 +153,10 @@ ul {
 
 
 footer {
-    border-top: 5px solid rgb(243, 242, 242);
+    border-top: 5px solid var(--footer);
     margin-top: 200px;
     text-align: center;
-    background-color: #fdfdfd;
+    background-color: var( --fundo-2);
     font-size: 10px;
     height: 50px;
 }
@@ -146,13 +172,13 @@ footer {
 }
 
 .eletrica {
-    background: #f4f4f4;
+    background: var(--fundo-3);
     padding: 10px;
     border-radius: 4px;
 }
 
 .eletrica:hover {
-    border-left: 4px solid red;
+    border-left: 4px solid var( --cor-primaria);
 }
 
 .velocidade-div {
@@ -168,10 +194,11 @@ footer {
 .velocidade {
     padding: 10px;
     border-radius: 4px;
+    background-color: var(--fundo-1);
 }
 
 .velocidade:hover {
-    border-left: 4px solid red;
+    border-left: 4px solid var( --cor-primaria);
 }
 
 .rastreador-div {
@@ -186,12 +213,12 @@ footer {
 
 .rastreador {
     padding: 10px;
-    background: #f4f4f4;
+    background: var(--fundo-3);
     border-radius: 4px;
 }
 
 .rastreador:hover {
-    border-left: 4px solid red;
+    border-left: 4px solid var( --cor-primaria);
 }
 
 @media (max-width: 1000px) {
