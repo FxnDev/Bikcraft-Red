@@ -137,6 +137,7 @@ ul {
     text-align: end;
     align-self: center;
     position: relative;
+    margin-right: 10px;
     background-image: var(--onda);
 }
 
@@ -229,6 +230,7 @@ footer {
     .subtitulo-vantagem {
         text-align: center;
         font-size: 2rem;
+        margin-right: 0px;
     }
 
     .infos-vantagem {
